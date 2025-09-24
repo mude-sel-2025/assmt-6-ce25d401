@@ -118,8 +118,8 @@ def task5_mean_std(N=1000, m=10):
          stds  = np.std(data, axis=1)
          # WRITE_YOUR_CODE HERE TO COMPUTE THEORETICAL MEAN, STD OF SAMPLE MEANS
          # theoretical CLT parameters
-         theo_mu  = means.mean()
-         theo_std = stds.std()
+         theo_mu  = dist.mean()
+         theo_std = np.sqrt(dist.var()/m)
          # this code block ends here
          fig, axes = plt.subplots(1,2, figsize=(12,4))
          fig.suptitle(f"{name}: Sample Means vs Stds", fontsize=14)
